@@ -1,12 +1,15 @@
 /* ===== CP Electrics - Modern Electrician Website ===== */
-/* Design System: Dark navy + Electric amber/yellow accent */
+/* Design System: Electric blue + Yellow accent (matching brand logo) */
 
 :root {
-  --primary: #1a1f36;
-  --primary-light: #252b48;
-  --accent: #f59e0b;
-  --accent-hover: #d97706;
-  --accent-light: #fef3c7;
+  --primary: #0a1628;
+  --primary-light: #112240;
+  --accent: #ffd600;
+  --accent-hover: #f5c400;
+  --accent-light: #fff9c4;
+  --blue: #4fc3f7;
+  --blue-light: #81d4fa;
+  --blue-dark: #0288d1;
   --white: #ffffff;
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
@@ -85,7 +88,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--accent);
+  color: var(--blue);
   margin-bottom: 12px;
 }
 
@@ -93,7 +96,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   content: '';
   width: 32px;
   height: 2px;
-  background: var(--accent);
+  background: var(--blue);
   border-radius: 2px;
 }
 
@@ -133,7 +136,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
 .btn-primary:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 214, 0, 0.3);
 }
 
 .btn-secondary {
@@ -142,8 +145,8 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   border: 2px solid var(--gray-200);
 }
 .btn-secondary:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--blue);
+  color: var(--blue);
   transform: translateY(-2px);
 }
 
@@ -212,6 +215,17 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   align-items: center;
   gap: 10px;
 }
+.logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+.navbar.scrolled .logo-img {
+  height: 32px;
+}
+.footer .logo-img {
+  height: 36px;
+}
 .logo-icon {
   width: 44px;
   height: 44px;
@@ -232,7 +246,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   color: var(--primary);
 }
 .logo-text span {
-  color: var(--accent);
+  color: var(--blue);
 }
 
 .nav-links {
@@ -277,7 +291,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
 .nav-phone svg {
   width: 18px;
   height: 18px;
-  color: var(--accent);
+  color: var(--blue);
 }
 
 .mobile-toggle {
@@ -311,7 +325,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   right: -20%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(79,195,247,0.08) 0%, transparent 70%);
   border-radius: 50%;
 }
 .hero::after {
@@ -321,7 +335,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   left: -10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(245,158,11,0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(79,195,247,0.05) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -370,7 +384,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
 .hero-badge-icon {
   width: 40px;
   height: 40px;
-  background: rgba(245,158,11,0.15);
+  background: rgba(33,150,243,0.15);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -379,7 +393,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
 .hero-badge-icon svg {
   width: 20px;
   height: 20px;
-  color: var(--accent);
+  color: var(--blue-light);
 }
 .hero-badge-text {
   font-size: 0.85rem;
@@ -440,7 +454,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
 .hero-float-card .icon {
   width: 44px;
   height: 44px;
-  background: var(--accent-light);
+  background: #e1f5fe;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -497,7 +511,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   left: 0;
   right: 0;
   height: 3px;
-  background: var(--accent);
+  background: var(--blue);
   transform: scaleX(0);
   transition: var(--transition);
 }
@@ -512,7 +526,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
 .service-icon {
   width: 56px;
   height: 56px;
-  background: var(--accent-light);
+  background: #e1f5fe;
   border-radius: var(--radius);
   display: flex;
   align-items: center;
@@ -522,7 +536,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
 .service-icon svg {
   width: 28px;
   height: 28px;
-  color: var(--accent);
+  color: var(--blue);
 }
 
 .service-card h3 {
@@ -540,7 +554,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   gap: 6px;
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--accent);
+  color: var(--blue);
 }
 .service-card .learn-more:hover {
   gap: 10px;
@@ -585,7 +599,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   width: 48px;
   height: 48px;
   min-width: 48px;
-  background: var(--accent-light);
+  background: #e1f5fe;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -594,7 +608,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
 .why-feature-icon svg {
   width: 24px;
   height: 24px;
-  color: var(--accent);
+  color: var(--blue);
 }
 .why-feature h4 {
   margin-bottom: 4px;
@@ -622,7 +636,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   transform: translate(-50%, -50%);
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(79,195,247,0.06) 0%, transparent 70%);
   border-radius: 50%;
 }
 .cta-banner h2 {
@@ -684,7 +698,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--accent-light);
+  background: #e1f5fe;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -724,7 +738,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   transition: var(--transition);
 }
 .area-tag:hover {
-  background: var(--accent-light);
+  background: #e1f5fe;
   border-color: var(--accent);
   color: var(--primary);
 }
@@ -784,7 +798,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   transition: var(--transition);
 }
 .footer-links a:hover {
-  color: var(--accent);
+  color: var(--blue-light);
   padding-left: 4px;
 }
 
@@ -798,7 +812,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   width: 18px;
   height: 18px;
   min-width: 18px;
-  color: var(--accent);
+  color: var(--blue-light);
   margin-top: 3px;
 }
 
@@ -825,7 +839,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   right: -10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(79,195,247,0.06) 0%, transparent 70%);
   border-radius: 50%;
 }
 .page-header h1 {
@@ -922,7 +936,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
 }
 .sidebar-services-list a:hover,
 .sidebar-services-list a.active {
-  color: var(--accent);
+  color: var(--blue);
 }
 .sidebar-services-list a svg {
   width: 16px;
@@ -987,7 +1001,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   width: 48px;
   height: 48px;
   min-width: 48px;
-  background: var(--accent-light);
+  background: #e1f5fe;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -996,7 +1010,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
 .contact-info-card .icon svg {
   width: 22px;
   height: 22px;
-  color: var(--accent);
+  color: var(--blue);
 }
 .contact-info-card h4 {
   font-size: 0.95rem;
@@ -1063,7 +1077,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   outline: none;
   border-color: var(--accent);
   background: var(--white);
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+  box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.2);
 }
 .form-group textarea {
   resize: vertical;
